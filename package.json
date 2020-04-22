@@ -1,5 +1,6 @@
 {
   "name": "meshiterro",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {}
 }
