@@ -3,6 +3,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :post_images, only: %i[new create index show] do
+    resource :favorites, only: %i[create destroy]
     resource :post_comments, only: %i[create]
   end
 

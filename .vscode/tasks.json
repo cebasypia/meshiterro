@@ -1,13 +1,12 @@
 {
   // See https://go.microsoft.com/fwlink/?LinkId=733558
-  {
-    "version": "2.0.0",
-    "tasks": [{
+  "version": "2.0.0",
+  "tasks": [{
       "label": "ERB formatter",
       "type": "shell",
       "command": "ext=$(echo ${file}) && if [ ${ext##*.} = erb ]; then htmlbeautifier ${file} ${file}; else echo 'Not an ERB file'; fi",
       "presentation": {
-        "reveal": "never",
+        "reveal": "always",
         "panel": "new",
         "echo": false
       },
@@ -15,5 +14,11 @@
         "kind": "build",
         "isDefault": true
       }
-    }]
-  }
+    },
+    {
+      "label": "echo",
+      "type": "shell",
+      "command": "echo Hello"
+    }
+  ]
+}
