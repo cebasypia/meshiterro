@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     resource :favorites, only: %i[create destroy]
     resource :post_comments, only: %i[create]
   end
-  resources :users, only: [:show]
+  resources :users, only: %i[show edit update]
 end
