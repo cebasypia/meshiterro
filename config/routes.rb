@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'users/show'
   devise_for :users
-  resources :post_images, only: %i[new create index show] do
+  resources :post_images, only: %i[new create index show destroy] do
     resource :favorites, only: %i[create destroy]
     resource :post_comments, only: %i[create]
   end
